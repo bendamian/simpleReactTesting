@@ -7,15 +7,26 @@ import {useState} from 'react';
 
 function App() {
   const [colourValue,setColorValue] = useState('')
+  const [hexValue,setHexValue] = useState('')
+  const[isDarkText,setIsDarkText] = useState('true')
   return (
     <div className="App">
      
 <h1> Hello</h1>
-<Square colourValue={colourValue}/>
+<Square 
+colourValue={colourValue}
+hexValue={hexValue}
+isDarkText={isDarkText}
+/>
 <Input
 colourValue={colourValue}
-setColorValue
+setColorValue ={setColorValue}
+setHexValue={setHexValue}
+isDarkText={isDarkText} 
+setIsDarkText = {setIsDarkText}
+
 />
+
 
     </div>
   );
